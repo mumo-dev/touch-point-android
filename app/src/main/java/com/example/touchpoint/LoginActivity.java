@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
                 progressDialog.show();
 
                 User user = new User(email, password);
-                ApiClient.getClient("http://touchpoint-123.herokuapp.com")
+                ApiClient.getClient()
                         .loginUser(user)
                         .enqueue(new Callback<LoginResponse>() {
                             @Override
